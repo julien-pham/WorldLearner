@@ -20,11 +20,11 @@ Because this is a zero-build app, you can run it with any simple local server.
 python3 -m http.server 5173
 ```
 
-Then open `http://localhost:5173/menu.html` (or just `http://localhost:5173/`).
+Then open `http://localhost:5173/menu.html`.
 
 ### Option B
 
-Use any “Live Server” extension, or similar.
+Use any “Live Server” extension or similar.
 
 ## Notes
 
