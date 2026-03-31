@@ -8,7 +8,7 @@ Learn world countries by continent with:
 
 ## Play online
 
-https://julien-pham.github.io/WorldLearner/menu.html
+https://julien-pham.github.io/WorldLearner/
 
 ## Run it locally
 
