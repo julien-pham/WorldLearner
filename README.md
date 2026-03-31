@@ -11,7 +11,7 @@ Learn world countries by continent with:
 
 Because this is a zero-build app, you can run it with any simple local server.
 
-### Option A (Python)
+### Option A
 
 ```bash
 python3 -m http.server 5173
@@ -19,7 +19,7 @@ python3 -m http.server 5173
 
 Then open `http://localhost:5173/menu.html` (or just `http://localhost:5173/`).
 
-### Option B (VS Code / Cursor)
+### Option B
 
 Use any “Live Server” extension, or similar.
 
