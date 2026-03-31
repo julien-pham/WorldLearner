@@ -6,6 +6,10 @@ Learn world countries by continent with:
 - **Scoring**: time + streak bonuses
 - **Saved high score**: stored in localStorage
 
+## 🚀 Play online
+
+👉 https://julien-pham.github.io/WorldLearner/menu.html
+
 ## Run it locally
 
 Because this is a zero-build app, you can run it with any simple local server.
