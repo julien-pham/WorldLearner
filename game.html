@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Learner — Game</title>
+    <meta name="description" content="Click the correct country on the map." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg"></div>
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="brandText">
+          <div class="brandTitle">World Learner</div>
+          <div class="brandSub" id="subTitle">—</div>
+        </div>
+      </div>
+
+      <div class="topRight">
+        <div class="topStats">
+          <div class="pill">
+            <span class="pillK">Score</span>
+            <span class="pillV" id="pillScore">0</span>
+          </div>
+
+          <div class="pill">
+            <span class="pillK">Streak</span>
+            <span class="pillV" id="pillStreak">0</span>
+          </div>
+
+          <div class="pill">
+            <span class="pillK">High</span>
+            <span class="pillV" id="pillHigh">0</span>
+          </div>
+        </div>
+
+        <a href="https://github.com/julien-pham" target="_blank" class="github-header" title="GitHub">
+          <svg height="22" width="22" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 
+            0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
+            -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66
+            .07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
+            0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 
+            0 0 .67-.21 2.2.82 .64-.18 1.32-.27 2-.27 
+            .68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82 
+            .44 1.1.16 1.92.08 2.12 .51.56.82 1.27.82 2.15 
+            0 3.07-1.87 3.75-3.65 3.95 .29.25.54.73.54 1.48 
+            0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8 
+            c0-4.42-3.58-8-8-8z"/>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+      
+    <main class="shell">
+      <section class="card game gameWide">
+        <div class="gameHeader">
+          <div class="gameTitle">
+            <div class="kicker" id="kicker">—</div>
+            <div class="prompt">
+              <span class="muted">Find:</span> <span class="target" id="targetName">—</span>
+            </div>
+          </div>
+
+          <div class="flagBox" aria-live="polite">
+            <img id="flagImg" class="flagImg" alt="" />
+          </div>
+
+          <div class="gameMeta">
+            <div class="meta">
+              <div class="metaK">Round</div>
+              <div class="metaV"><span id="roundIdx">0</span>/<span id="roundTotal">0</span></div>
+            </div>
+            <div class="meta">
+              <div class="metaK">Time</div>
+              <div class="metaV"><span id="time">0.0</span>s</div>
+            </div>
+            <div class="meta" id="metaRoundPoints">
+              <div class="metaK">This round</div>
+              <div class="metaV"><span id="roundPoints">0</span> pts</div>
+            </div>
+            <div class="meta">
+              <div class="metaK">Avg time</div>
+              <div class="metaV"><span id="avgTime">—</span>s</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mapFull">
+          <div class="mapWrap mapWrapBig">
+            <svg id="map" viewBox="0 0 1000 520" role="img" aria-label="World map"></svg>
+          </div>
+        </div>
+
+        <div class="gameControls">
+          <div class="feedback" id="feedback" aria-live="polite"></div>
+          <div class="picked" id="picked" hidden>
+            <div class="pickedLabel muted">You clicked:</div>
+            <div class="pickedRow">
+              <img id="pickedFlag" class="pickedFlag" alt="" />
+              <div class="pickedName" id="pickedName">—</div>
+            </div>
+          </div>
+
+          <div class="controlsRow">
+            <button class="btn ghost" onclick="window.location.href='./menu.html'">Menu</button>
+            <button class="btn ghost" id="btnSkip">Skip</button>
+            <button class="btn" id="btnEnd">End session</button>
+            <button class="btn primary" id="btnPlayAgain" hidden>Play again</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <canvas id="confetti" class="confetti" width="1" height="1" aria-hidden="true"></canvas>
+
+    <script type="module" src="./game.js"></script>
+  </body>
+</html>

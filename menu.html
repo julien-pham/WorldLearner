@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Learner — Menu</title>
+    <meta name="description" content="Pick a continent, difficulty, and number of countries to guess." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <div class="bg"></div>
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="brandText">
+          <div class="brandTitle">World Learner</div>
+          <div class="brandSub">Learn countries by clicking on the map</div>
+        </div>
+      </div>
+
+      <div class="topRight">
+        <div class="topStats">
+          <div class="pill">
+            <span class="pillK">High</span>
+            <span class="pillV" id="pillHigh">0</span>
+          </div>
+        </div>
+
+        <a href="https://github.com/julien-pham" target="_blank" class="github-header" title="GitHub">
+          <svg height="22" width="22" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 
+            0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
+            -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66
+            .07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
+            0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 
+            0 0 .67-.21 2.2.82 .64-.18 1.32-.27 2-.27 
+            .68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82 
+            .44 1.1.16 1.92.08 2.12 .51.56.82 1.27.82 2.15 
+            0 3.07-1.87 3.75-3.65 3.95 .29.25.54.73.54 1.48 
+            0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8 
+            c0-4.42-3.58-8-8-8z"/>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="card hero">
+        <div class="heroLeft">
+          <h1>Click the correct country</h1>
+          <p class="muted">
+            Goal: you’ll be given a <b>country name + flag</b>. Click the correct country on the map as fast as you can.
+          </p>
+
+          <div class="grid3">
+            <div class="field">
+              <label>Continent</label>
+              <div class="seg" role="group" aria-label="Continent">
+                <button class="segBtn isActive" type="button" data-seg="continent" data-value="All">All</button>
+                <button class="segBtn" type="button" data-seg="continent" data-value="Africa">Africa</button>
+                <button class="segBtn" type="button" data-seg="continent" data-value="Americas">Americas</button>
+                <button class="segBtn" type="button" data-seg="continent" data-value="Asia">Asia</button>
+                <button class="segBtn" type="button" data-seg="continent" data-value="Europe">Europe</button>
+                <button class="segBtn" type="button" data-seg="continent" data-value="Oceania">Oceania</button>
+              </div>
+              <input id="continent" type="hidden" value="All" />
+            </div>
+
+            <div class="field">
+              <label>Countries to guess</label>
+              <div class="seg" role="group" aria-label="Countries to guess">
+                <button class="segBtn" type="button" data-seg="count" data-value="5">5</button>
+                <button class="segBtn isActive" type="button" data-seg="count" data-value="10">10</button>
+                <button class="segBtn" type="button" data-seg="count" data-value="all">All</button>
+              </div>
+              <input id="count" type="hidden" value="10" />
+            </div>
+
+            <div class="field">
+              <label>Difficulty</label>
+              <div class="seg" role="group" aria-label="Difficulty">
+                <button class="segBtn isActive" type="button" data-seg="difficulty" data-value="normal">Normal</button>
+                <button class="segBtn" type="button" data-seg="difficulty" data-value="learning">Learning</button>
+              </div>
+              <input id="difficulty" type="hidden" value="normal" />
+            </div>
+          </div>
+
+          <div class="ctaRow">
+            <button class="btn primary" id="btnPlay">Play</button>
+            <button class="btn ghost" id="btnResetHigh" title="Reset saved high score">Reset high score</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./menu.js"></script>
+  </body>
+</html>
