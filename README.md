@@ -2,8 +2,7 @@
 
 Learn world countries by continent with:
 - **Continents**: Africa, Americas, Asia, Europe, Oceania (or All)
-- **Difficulties**: Easy (multiple choice), Medium (type), Hard (click on map)
-- **Hints**: letter/capital/region hints with a score penalty
+- **Difficulties**: Normal or Learning
 - **Scoring**: time + streak bonuses
 - **Saved high score**: stored in localStorage
 
